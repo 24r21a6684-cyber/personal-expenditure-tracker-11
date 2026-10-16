@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 14px; background: #f1f5f9; color: #172033; font-family: Arial, sans-serif; }
+.container { max-width: 850px; margin: 0 auto; }
+h1 { margin: 0; text-align: center; color: #3730a3; }
+.subtitle { margin: 8px 0 24px; text-align: center; color: #64748b; }
+.card { margin-bottom: 18px; padding: 22px; background: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 4px 14px #0f172a0a; }
+.total-card { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #eef2ff; }
+.total-card span { font-weight: bold; }
+.total-card strong { color: #3730a3; font-size: 25px; }
+h2 { margin: 0 0 16px; font-size: 19px; }
+form { display: grid; gap: 9px; }
+label { margin-top: 5px; font-size: 14px; font-weight: bold; }
+input, select { width: 100%; padding: 11px; border: 1px solid #cbd5e1; border-radius: 7px; font-size: 15px; background: white; }
+button { padding: 11px 14px; border: 0; border-radius: 7px; background: #4f46e5; color: white; font-size: 14px; font-weight: bold; cursor: pointer; }
+form button { margin-top: 8px; }
+button:hover { background: #3730a3; }
+.delete-button { padding: 7px 9px; background: #fee2e2; color: #b91c1c; }
+.delete-button:hover { background: #fecaca; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; min-width: 560px; }
+th, td { padding: 12px 8px; border-bottom: 1px solid #e2e8f0; text-align: left; font-size: 14px; }
+th { color: #475569; background: #f8fafc; }
+.empty { padding: 22px; text-align: center; color: #64748b; }
+#message { min-height: 18px; margin: 0 0 8px; color: #b91c1c; font-size: 14px; }
+.note { text-align: center; color: #64748b; font-size: 12px; }
+@media (max-width: 520px) { .card { padding: 16px; } .total-card { align-items: flex-start; flex-direction: column; } }

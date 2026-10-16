@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Expenditure Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Personal Expenditure Tracker</h1>
+    <p class="subtitle">Record and manage your daily expenses</p>
+
+    <section class="card total-card">
+      <span>Total Expenditure</span>
+      <strong id="total">₹0.00</strong>
+    </section>
+
+    <section class="card">
+      <h2>Add Expense</h2>
+      <p id="message" role="status"></p>
+      <form id="expenseForm">
+        <label for="name">Expense Name</label>
+        <input id="name" name="name" type="text" placeholder="e.g. Lunch" maxlength="100" required>
+        <label for="amount">Amount (₹)</label>
+        <input id="amount" name="amount" type="number" min="0.01" step="0.01" placeholder="150" required>
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="Food">Food</option><option value="Travel">Travel</option>
+          <option value="Education">Education</option><option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option><option value="Other">Other</option>
+        </select>
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required>
+        <button type="submit">Add Expense</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Expense History</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Name</th><th>Amount</th><th>Category</th><th>Date</th><th>Action</th></tr></thead>
+          <tbody id="expenseRows"><tr><td colspan="5" class="empty">Loading expenses...</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <p class="note">Expenses are saved in MongoDB and remain after restarting the server.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
