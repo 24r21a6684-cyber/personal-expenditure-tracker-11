@@ -11,7 +11,7 @@ const client = new MongoClient(process.env.MONGODB_URI || "");
 let expenses;
 
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 app.get("/api/expenses", async (req, res) => {
   try {
